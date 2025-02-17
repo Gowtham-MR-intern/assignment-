@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaTrash } from 'react-icons/fa';
 
-function Sidebar() {
+function Flexbox() {
   // State variables for various flex properties.
   const [flexDirection, setFlexDirection] = useState("row");
   const [flexWrap, setFlexWrap] = useState("nowrap");
@@ -305,7 +305,7 @@ function Sidebar() {
           {items.map((item, index) => (
             <div
               key={index}
-              onClick={() => handleItemClick(index)} // Select item on click
+              onClick={() => handleItemClick(index)} 
               className={`bg-gray-300 p-4 mx-2 my-2 rounded-md shadow flex items-center justify-between cursor-pointer ${selectedItem === index ? 'border-2 border-green-500' : ''}`}
               style={{
                 flexGrow: item.flexGrow,
@@ -335,4 +335,4 @@ function Sidebar() {
   );
 }
 
-export default Sidebar;
+export default Flexbox;

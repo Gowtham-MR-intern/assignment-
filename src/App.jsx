@@ -1,13 +1,19 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar';
-import Sidebar from './components/sidebar';
+import FlexPlayground from './components/Flexbox';
+import FetchAPI from './components/Fetchapi'
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <Sidebar />
-    </div>
+      <Router>
+        <Navbar />
+        <Routes>
+            <Route path="/" element={<FlexPlayground/>}/>
+            <Route path="/fetch" element={<FetchAPI/>}/>
+            
+        </Routes>
+      </Router>
   );
 }
 
