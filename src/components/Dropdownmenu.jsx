@@ -15,7 +15,7 @@ function Dropdownmenu() {
         <div className="w-50 gap-4 bg-white rounded-lg flex flex-col items-center">
             
             <select
-                className="w-full p-2 rounded-md"
+                className="w-full p-2 rounded-md cursor-pointer"
                 onChange={handleChange}
             >
                 <option value="/">Home</option>
