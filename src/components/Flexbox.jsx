@@ -315,11 +315,12 @@ function Flexbox() {
                 order: item.order
               }}
             >
+              
               <span>{item.name}</span>
               {/* Delete button/icon that always deletes the last item */}
               <button
                 onClick={(e) => {
-                  e.stopPropagation();
+                  e.stopPropagation(); //handled bubbling
                   deleteLastItem();
                 }}
                 className="text-red-400 hover:text-red-700 mx-2"
