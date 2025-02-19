@@ -6,7 +6,10 @@ function Dropdownmenu() {
 
   const handleChange = (event) => {
     const value = event.target.value;
-    if (value) {
+    // console.log(event);
+    // console.log(event.target.value);
+    // console.log(event.target.classList.value)
+    if(value) {
       navigate(value);
     }
   };
@@ -15,10 +18,10 @@ function Dropdownmenu() {
         <div className="w-50 gap-4 bg-white rounded-lg flex flex-col items-center">
             
             <select
-                className="w-full p-2 rounded-md"
+                className="w-full p-2 rounded-md cursor-pointer"
                 onChange={handleChange}
             >
-                <option value="/">Home</option>
+                <option value="/">Exercise</option>
                 <option value="/flexbox">Flexbox</option>
                 <option value="/fetch">Fetch API</option>
                 <option value="/uicomponent">UI Component</option>

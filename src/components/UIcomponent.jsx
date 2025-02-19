@@ -28,42 +28,34 @@ function UIcomponent() {
       setIsModalOpen(false);
     };
 
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        setTimeout(() => {
-          setLoading(false); 
-        }, 3000);
-      }, []);
-
 
   return (
-    <div className='bg-cyan-100 h-178'>
-        <div className='flex flex-wrap justify-around px-8 py-16 '>
-            <div className='w-80 gap-8 px-4 py-10 bg-green-300 rounded-lg flex flex-col items-center'>
-                <h1 className='text-center text-xl font-bold'>Button Component</h1>
+    <div className='bg-gray-800 h-full'>
+        <div className='flex flex-wrap justify-around px-4 py-12'>
+            <div className='w-80 gap-8 px-4 py-6 m-4 bg-gray-700 rounded-lg flex flex-col items-center'>
+                <h1 className='text-center text-2xl font-bold text-white'>Button Component</h1>
                 <Button text="Login" onClick={() => alert("Login Clicked!")} />
                     {/* disable button  */}
                 <Button text="Logout" disabled />
             </div>
 
             {/* checkbox */}
-            <div className="w-80 gap-4 p-4 bg-green-300 rounded-lg flex flex-col ">
-                <h1 className="text-center text-xl font-bold">Checkbox Component</h1>
+            <div className="w-80 gap-4 px-4 py-6 m-4 bg-gray-700 rounded-lg flex flex-col text-white">
+                <h1 className="text-center text-2xl font-bold">Checkbox Component</h1>
                 <Checkbox label="Notebook" defaultChecked={true} />
                 <Checkbox label="Mobile" defaultChecked={false} />
                 <Checkbox label="Watch" defaultChecked={false} />
             </div>
 
             {/* dropdown */}
-            <div className="w-80 gap-8 p-4 bg-green-300 rounded-lg flex flex-col items-center">
-                <h1 className="text-center text-xl font-bold">Dropdown Component</h1>
+            <div className="w-80 gap-8 px-4 py-6 m-4 bg-gray-700 rounded-lg flex flex-col items-center ">
+                <h1 className="text-center text-2xl font-bold text-white">Dropdown Component</h1>
                 <Dropdownmenu/>
             </div>
 
             {/* TextField */}
-            <div className="w-80 gap-4 p-4 bg-green-300 rounded-lg flex flex-col items-center">
-                <h1 className="text-center text-xl font-bold">TextField Component</h1>
+            <div className="w-80 gap-4 px-4 py-6 m-4 bg-gray-700 rounded-lg flex flex-col items-center">
+                <h1 className="text-center text-2xl font-bold text-white">TextField Component</h1>
                 <TextField 
                     type="text"
                     label="Username" 
@@ -78,12 +70,12 @@ function UIcomponent() {
        
         </div>
 
-        <div className='flex flex-wrap justify-around px-4 py-8'>
+        <div className='flex flex-wrap justify-around p-4'>
             {/* Typography */}
-            <div className="w-80 gap-4 h-60 p-4 bg-green-300 rounded-lg flex flex-col items-center">
-                <h1 className="text-center text-xl font-bold mb-4">Typography Component</h1>
+            <div className="w-80 gap-4 h-60 px-4 py-6 m-4 bg-gray-700 rounded-lg flex flex-col items-center ">
+                <h1 className="text-center text-2xl font-bold mb-4 text-white">Typography Component</h1>
 
-                <Typography variant="h4" className="text-center">
+                <Typography variant="h4" className="text-center ">
                     This is a Heading 1
                 </Typography>
                 <Typography variant="h3" className="text-center mt-2">
@@ -95,9 +87,9 @@ function UIcomponent() {
             </div>
       
             {/* Chip */}
-            <div className="w-80 gap-4 p-4 bg-green-300 rounded-lg flex flex-col items-center">
+            <div className="w-80 gap-4 px-4 py-6 m-4 bg-gray-700 rounded-lg flex flex-col items-center">
 
-                <h1 className="text-center text-xl font-bold mb-4">Chip Component</h1>
+                <h1 className="text-center text-2xl font-bold mb-4 text-white">Chip Component</h1>
 
                 <div className="flex flex-wrap gap-4 justify-center">
                 {chips.map((chip, index) => (
@@ -112,12 +104,12 @@ function UIcomponent() {
             </div>
 
             {/* Dialog */}
-            <div className="w-80 gap-4 p-4 bg-green-300 rounded-lg flex flex-col items-center">
-                <h1 className="text-center mb-4 text-xl font-bold">Dialog Component</h1>
+            <div className="w-80 gap-4 px-4 py-6 m-4 bg-gray-700 rounded-lg flex flex-col items-center">
+                <h1 className="text-center mb-4 text-2xl font-bold text-white">Dialog Component</h1>
 
                 <button
                     onClick={handleOpenModal}
-                    className="px-4 py-2 bg-pink-500 text-white rounded-md hover:bg-pink-600"
+                    className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600"
                 >
                     Open Modal
                 </button>
@@ -125,20 +117,16 @@ function UIcomponent() {
                 <Dialog
                     isOpen={isModalOpen} 
                     onClose={handleCloseModal} 
-                    title="Sample Modal"
+                    title="Dialog Box"
                 >
-                    <p>This is a sample modal dialog content.</p>
+                    <p>Are you sure to proceed.</p>
                 </Dialog>
             </div>
         
             {/* Loading */}
-            <div className="w-80 gap-4 p-4 bg-green-300 rounded-lg flex flex-col items-center">
-                <h1 className="text-center mb-4 text-xl font-bold">Loading/Spinner Component</h1>
-                {loading ? (
+            <div className="w-80 gap-4 px-4 py-6 m-4 bg-gray-700 rounded-lg flex flex-col items-center">
+                <h1 className="text-center mb-4 text-2xl font-bold text-white">Loading/Spinner Component</h1>
                     <Loading />
-                    ) : (
-                    <h1 className="text-center text-xl font-semibold">Content Loaded!</h1>
-                )}
             </div>
 
         </div>

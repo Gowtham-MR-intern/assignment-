@@ -110,15 +110,10 @@ function Flexbox() {
     h-full p-4 border rounded-md bg-gray-100 overflow-auto`;
 
   return (
-    <div className="flex h-screen bg-white overflow-hidden pb-5">
+    <div className="flex h-screen bg-white overflow-hidden ">
       {/* Sidebar */}
-      <div className="w-75 flex-none bg-gray-800 text-white h-200 p-4 overflow-y-auto">
-        <button 
-          onClick={addItem} 
-          className="w-full bg-blue-500 text-white p-2 rounded mb-4 hover:bg-blue-600"
-        >
-          Add Item
-        </button>
+      <div className="w-75 flex-none bg-gray-800 text-white h-screen p-4 overflow-y-auto">
+        
 
         {/* Tab Navigation */}
         <div className="flex mb-4">
@@ -136,6 +131,12 @@ function Flexbox() {
           </button>
         </div>
 
+          <button 
+            onClick={addItem} 
+            className="w-full bg-blue-500 text-white p-2 rounded mb-4 hover:bg-blue-600"
+          >
+            Add Item
+          </button>
         {activeTab === "container" && (
           <div>
             <h2 className="text-xl font-bold mb-4">Flex Settings</h2>
@@ -193,10 +194,10 @@ function Flexbox() {
                 onChange={(e) => setAlignItems(e.target.value)}
                 className="w-full bg-gray-500 text-white p-2 rounded"
               >
-                <option value="stretch">Stretch</option>
                 <option value="start">Flex Start</option>
                 <option value="center">Center</option>
                 <option value="end">Flex End</option>
+                <option value="stretch">Stretch</option>
                 <option value="baseline">Baseline</option>
               </select>
             </div>
@@ -208,10 +209,11 @@ function Flexbox() {
                 onChange={(e) => setAlignContent(e.target.value)}
                 className="w-full bg-gray-500 text-white p-2 rounded"
               >
-                <option value="stretch">Stretch</option>
+                
                 <option value="start">Flex Start</option>
                 <option value="center">Center</option>
                 <option value="end">Flex End</option>
+                <option value="stretch">Stretch</option>
                 <option value="between">Space Between</option>
                 <option value="around">Space Around</option>
               </select>
@@ -323,7 +325,7 @@ function Flexbox() {
                   e.stopPropagation(); //handled bubbling
                   deleteLastItem();
                 }}
-                className="text-red-400 hover:text-red-700 mx-2"
+                className="text-red-400 hover:text-red-700 mx-2 cursor-pointer"
                 title="Delete Last Item"
               >
                 <FaTrash size={18} />

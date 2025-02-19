@@ -14,14 +14,15 @@ const Fetchapi = () => {
     },[]);
 
   return (
-    <div>
-        <div className='flex flex-wrap justify-evenly bg-gray-300'>
-            
+    <div className=' bg-gray-800'>
+        <h1 className='text-white text-center text-5xl p-8 font-bold'>Fetching Data From API</h1>
+        <div className='flex flex-wrap justify-evenly'>
+        
             {!data[0] ? (
                 <p>Loading</p>
             ):(
             data.map((element,index) =>(
-                <div className='border w-100 p-4 m-4 bg-indigo-800 rounded-lg text-slate-200 ' key={index}> 
+                <div className='w-100 p-4 m-4 bg-cyan-500  rounded-lg  text-white' key={index}> 
                     <p>Data : {index+1}</p>
                     <p>Country Name : {element.name.common}</p>
                     <p>Official : {element.name.official}</p>
