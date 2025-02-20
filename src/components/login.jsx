@@ -21,12 +21,12 @@ const login = () => {
             else{
                 alert("Please enter valid data");
             }
-        },2000);
+        },1000);
 
     }
 
   return (
-    <div className='flex bg-gray-800 justify-center items-center h-full '>
+    <div className='flex bg-gray-800 justify-center items-center h-full'>
     <div className=' w-90 rounded-lg drop-shadow-lg px-8 py-6 bg-gray-700 '>
         <Typography variant="h2" className="text-center">
             Login

@@ -52,6 +52,9 @@ function Dropdown(){
                     <Link to="/login" className='block w-full' onClick={() =>{handleselect("Login")}}>Login</Link>
                 </li>
 
+                <li className="block p-2 text-black text-sm hover:bg-gray-200  ps-4 cursor-pointer ">
+                    <Link to="/weather" className='block w-full' onClick={() =>{handleselect("Weather Report")}}>Weather Report</Link>
+                </li>
             </ul>
             </div>
         )}

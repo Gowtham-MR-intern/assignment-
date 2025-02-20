@@ -6,6 +6,7 @@ import FetchAPI from './components/Fetchapi'
 import Homepage from './components/home.jsx'
 import UIcomponent from './components/UIcomponent.jsx'
 import Login from './components/login.jsx';
+import Weather from './components/weather.jsx';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/fetch" element={<FetchAPI/>}/>
             <Route path="/uicomponent" element={<UIcomponent/>}/>
             <Route path="/login" element={<Login/>}/>
+            <Route path="/weather" element={<Weather/>}/>
         </Routes>
       </Router>
   );
