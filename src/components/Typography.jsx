@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Typography = ({ variant, children}) => {
+const Typography = ({ variant, children, className}) => {
   const typographyStyles = {
     h1: "text-4xl font-extrabold",
-    h2: "text-3xl font-semibold",
+    h2: "text-3xl font-semibold mb-2",
     h3: "text-2xl font-medium",
     h4: "text-xl font-normal",
     body1: "text-base font-normal",
@@ -14,7 +14,7 @@ const Typography = ({ variant, children}) => {
   };
 
   return (
-    <div className={`text-white ${typographyStyles[variant]}`}>
+    <div className={`text-white ${typographyStyles[variant]} ${className}`}>
       {children}
     </div>
   );

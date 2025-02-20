@@ -6,9 +6,6 @@ function Dropdownmenu() {
 
   const handleChange = (event) => {
     const value = event.target.value;
-    // console.log(event);
-    // console.log(event.target.value);
-    // console.log(event.target.classList.value)
     if(value) {
       navigate(value);
     }

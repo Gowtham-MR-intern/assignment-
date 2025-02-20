@@ -32,7 +32,7 @@ function UIcomponent() {
   return (
     <div className='bg-gray-800 h-full'>
         <div className='flex flex-wrap justify-around px-4 py-12'>
-            <div className='w-80 gap-8 px-4 py-6 m-4 bg-gray-700 rounded-lg flex flex-col items-center'>
+            <div className='w-80 gap-2 px-4 py-6 m-4 bg-gray-700 rounded-lg flex flex-col items-center'>
                 <h1 className='text-center text-2xl font-bold text-white'>Button Component</h1>
                 <Button text="Login" onClick={() => alert("Login Clicked!")} />
                     {/* disable button  */}
@@ -73,9 +73,9 @@ function UIcomponent() {
         <div className='flex flex-wrap justify-around p-4'>
             {/* Typography */}
             <div className="w-80 gap-4 h-60 px-4 py-6 m-4 bg-gray-700 rounded-lg flex flex-col items-center ">
-                <h1 className="text-center text-2xl font-bold mb-4 text-white">Typography Component</h1>
+                <h1 className="text-center text-2xl font-bold  text-white">Typography Component</h1>
 
-                <Typography variant="h4" className="text-center ">
+                <Typography variant="h4" className="text-center">
                     This is a Heading 1
                 </Typography>
                 <Typography variant="h3" className="text-center mt-2">
@@ -109,7 +109,7 @@ function UIcomponent() {
 
                 <button
                     onClick={handleOpenModal}
-                    className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600"
+                    className="px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 cursor-pointer"
                 >
                     Open Modal
                 </button>
@@ -125,8 +125,8 @@ function UIcomponent() {
         
             {/* Loading */}
             <div className="w-80 gap-4 px-4 py-6 m-4 bg-gray-700 rounded-lg flex flex-col items-center">
-                <h1 className="text-center mb-4 text-2xl font-bold text-white">Loading/Spinner Component</h1>
-                    <Loading />
+                <h1 className="text-center mb-4 text-2xl font-bold text-white">Loading Component</h1>
+                    <Loading text="Loading..." />
             </div>
 
         </div>

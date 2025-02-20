@@ -5,6 +5,8 @@ import FlexPlayground from './components/Flexbox';
 import FetchAPI from './components/Fetchapi'
 import Homepage from './components/home.jsx'
 import UIcomponent from './components/UIcomponent.jsx'
+import Login from './components/login.jsx';
+
 function App() {
   return (
       <Router>
@@ -14,6 +16,7 @@ function App() {
             <Route path="/flexbox" element={<FlexPlayground/>}/>
             <Route path="/fetch" element={<FetchAPI/>}/>
             <Route path="/uicomponent" element={<UIcomponent/>}/>
+            <Route path="/login" element={<Login/>}/>
         </Routes>
       </Router>
   );

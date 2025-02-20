@@ -6,7 +6,7 @@ function Checkbox({ label, defaultChecked }) {
       <input 
         type="checkbox" 
         defaultChecked={defaultChecked} 
-        className="w-5 h-5 accent-blue-500"
+        className="w-5 h-5 accent-blue-500 cursor-pointer"
       />
       <span className="text-base font-sans">{label}</span>
     </label>

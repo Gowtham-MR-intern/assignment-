@@ -1,15 +1,19 @@
 import React from 'react'
+import Loading from './Loading'
 
-function Button({text,onClick,disabled=false}) {
+function Button({text,onClick,disabled=false,loading}) {
   return (
         <button
-            className={`bg-orange-400 hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-full  
+            className={`bg-orange-400 hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-full mx-auto my-4 block
             ${disabled ? 'opacity-70 cursor-not-allowed' : 'cursor-pointer'}`}
-            // Only attach the onClick handler if not disabled
             onClick={onClick}
             disabled={disabled}
         >
-            {text}
+            {loading ? (
+              <Loading />
+            ): (
+              text
+            )}
         </button>
   )
 }
