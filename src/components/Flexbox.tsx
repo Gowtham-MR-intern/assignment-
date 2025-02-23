@@ -1,21 +1,30 @@
 import React, { useState } from 'react';
 import { FaTrash } from 'react-icons/fa';
 
-function Flexbox() {
-  // State variables for various flex properties.
-  const [flexDirection, setFlexDirection] = useState("row");
-  const [flexWrap, setFlexWrap] = useState("nowrap");
-  const [justifyContent, setJustifyContent] = useState("start");
-  const [alignItems, setAlignItems] = useState("start");
-  const [alignContent, setAlignContent] = useState("start");
+interface FlexItem {
+  name: string;
+  flexGrow: number;
+  flexShrink: number;
+  flexBasis: string;
+  alignSelf: string;
+  order: number;
+}
+
+const Flexbox:React.FC = () => {
+  
+  const [flexDirection, setFlexDirection] = useState<string>("row");
+  const [flexWrap, setFlexWrap] = useState<string>("nowrap");
+  const [justifyContent, setJustifyContent] = useState<string>("start");
+  const [alignItems, setAlignItems] = useState<string>("start");
+  const [alignContent, setAlignContent] = useState<string>("start");
 
   // State for dynamically adding items and selected item
-  const [items, setItems] = useState([]);
-  const [selectedItem, setSelectedItem] = useState(null);
-  const [activeTab, setActiveTab] = useState("container");
+  const [items, setItems] = useState<FlexItem[]>([]);
+  const [selectedItem, setSelectedItem] = useState<number | null>(null);
+  const [activeTab, setActiveTab] = useState<string>("container");
 
   // Function to add new items dynamically
-  const addItem = () => {
+  const addItem = ():void => {
     setItems((prevItems) => [...prevItems, { 
       name: `Item ${prevItems.length + 1}`, 
       flexGrow: 0, 
@@ -27,12 +36,12 @@ function Flexbox() {
   };
 
   // Function to always delete the last item
-  const deleteLastItem = () => {
+  const deleteLastItem = ():void => {
     setItems((prevItems) => prevItems.slice(0, prevItems.length - 1));
   };
 
   // Function to update the selected item's CSS properties
-  const updateItemProperty = (index, property, value) => {
+  const updateItemProperty = (index:number,property: keyof FlexItem, value: string | number):void => {
     setItems((prevItems) => {
       const updatedItems = [...prevItems];
       updatedItems[index] = {
@@ -43,7 +52,7 @@ function Flexbox() {
     });
   };
 
-  const handleItemClick = (index) => {
+  const handleItemClick = (index: number):void => {
     if (selectedItem === index) {
       setSelectedItem(null);
       setActiveTab("container");
@@ -53,7 +62,7 @@ function Flexbox() {
     }
   };
 
-  const handlePropertyChange = (property, value) => {
+  const handlePropertyChange = (property: keyof FlexItem, value: string):void => {
     if (selectedItem !== null) {
       const parsedValue = property === "flexGrow" || property === "flexShrink" || property === "order" ? parseInt(value, 10) : value;
       updateItemProperty(selectedItem, property, parsedValue);
@@ -61,20 +70,20 @@ function Flexbox() {
   };
 
   // Mapping objects to convert selected values into Tailwind CSS classes.
-  const flexDirectionClasses = {
+  const flexDirectionClasses:Record<string, string> = {
     row: "flex-row",
     "row-reverse": "flex-row-reverse",
     column: "flex-col",
     "column-reverse": "flex-col-reverse"
   };
 
-  const flexWrapClasses = {
+  const flexWrapClasses:Record<string, string> = {
     nowrap: "flex-nowrap",
     wrap: "flex-wrap",
     "wrap-reverse": "flex-wrap-reverse"
   };
 
-  const justifyContentClasses = {
+  const justifyContentClasses:Record<string, string> = {
     start: "justify-start",
     center: "justify-center",
     end: "justify-end",
@@ -83,7 +92,7 @@ function Flexbox() {
     evenly: "justify-evenly"
   };
 
-  const alignItemsClasses = {
+  const alignItemsClasses:Record<string, string> = {
     stretch: "items-stretch",
     start: "items-start",
     center: "items-center",
@@ -91,7 +100,7 @@ function Flexbox() {
     baseline: "items-baseline"
   };
 
-  const alignContentClasses = {
+  const alignContentClasses:Record<string, string> = {
     stretch: "content-stretch",
     start: "content-start",
     center: "content-center",
@@ -110,7 +119,7 @@ function Flexbox() {
     h-full p-4 border rounded-md bg-gray-100 overflow-auto`;
 
   return (
-    <div className="flex h-screen bg-white overflow-hidden ">
+    <div className="flex h-screen bg-white overflow-hidden ">    
       {/* Sidebar */}
       <div className="w-75 flex-none bg-gray-800 text-white h-screen p-4 overflow-y-auto">
         

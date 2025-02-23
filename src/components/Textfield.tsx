@@ -1,6 +1,12 @@
 import React from 'react';
 
-function TextField({ type,label, placeholder,onChange}) {
+type textprops={
+  type:string,
+  label:string,
+  placeholder:string,
+  onChange?:(e: React.ChangeEvent<HTMLInputElement>) =>void
+}
+function TextField({ type,label, placeholder,onChange}:textprops) {
 
   return (
     <div className="w-full flex flex-col gap-2 ml-6">

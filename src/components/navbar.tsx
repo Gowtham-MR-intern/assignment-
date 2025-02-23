@@ -1,10 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Dropdown from './Dropdown';
+import Dropdown from './Dropdown.js';
 
-const Navbar = () => {
-
-
+const Navbar:React.FC = () => {
   return (
     <nav className="bg-purple-700 py-3 px-5 flex items-center relative justify-between">
       <h1 className="text-xl text-white font-bold">
