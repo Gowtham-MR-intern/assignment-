@@ -3,17 +3,17 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar';
 import FlexPlayground from './components/Flexbox';
 import FetchAPI from './components/Fetchapi'
-import Homepage from './components/home.jsx'
-import UIcomponent from './components/UIcomponent.jsx'
-import Login from './components/login.jsx';
-import Weather from './components/weather.jsx';
+import Home from './components/home'
+import UIcomponent from './components/UIcomponent'
+import Login from './components/login';
+import Weather from './components/Weather';
 
-function App() {
+const App:React.FC = () => {
   return (
-      <Router>
+    <Router>
         <Navbar />
         <Routes>
-            <Route path="/" element={<Homepage/>}/>
+            <Route path="/" element={<Home/>}/>
             <Route path="/flexbox" element={<FlexPlayground/>}/>
             <Route path="/fetch" element={<FetchAPI/>}/>
             <Route path="/uicomponent" element={<UIcomponent/>}/>

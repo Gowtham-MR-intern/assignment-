@@ -9,22 +9,22 @@ import Dialog from './dialog'
 import Loading from './Loading'
 
 
-function UIcomponent() {
-    const [chips, setChips] = useState([
+const UIcomponent:React.FC = () => {
+    const [chips, setChips] = useState<string[]>([
         'JavaScript', 'React', 'Tailwind CSS', 'Node.js'
       ]);
     
-    const handleChipRemove = (chipToRemove) => {
+    const handleChipRemove = (chipToRemove:string) => {
         setChips(chips.filter(chip => chip !== chipToRemove));
     };
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
-    const handleOpenModal = () => {
+    const handleOpenModal = ():void => {
       setIsModalOpen(true);
     };
   
-    const handleCloseModal = () => {
+    const handleCloseModal = ():void => {
       setIsModalOpen(false);
     };
 
@@ -126,7 +126,7 @@ function UIcomponent() {
             {/* Loading */}
             <div className="w-80 gap-4 px-4 py-6 m-4 bg-gray-700 rounded-lg flex flex-col items-center">
                 <h1 className="text-center mb-4 text-2xl font-bold text-white">Loading Component</h1>
-                    <Loading text="Loading..." />
+                    <Loading text="Loading..." className="w-8 h-8" />
             </div>
 
         </div>

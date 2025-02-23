@@ -1,6 +1,13 @@
 import React from 'react';
 
-function Modal({ isOpen, onClose, title, children }) {
+type modalprops ={
+  isOpen:boolean,
+  onClose:()=>void,
+  title:string,
+  children?:React.ReactNode
+}
+const Modal = ({ isOpen, onClose, title, children }:modalprops) => {
+
   if (!isOpen) return null;
 
   return (

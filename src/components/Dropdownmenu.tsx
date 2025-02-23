@@ -1,10 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function Dropdownmenu() {
+
+const Dropdownmenu:React.FC = () => {
   const navigate = useNavigate();
 
-  const handleChange = (event) => {
+  const handleChange = (event: React.ChangeEvent<HTMLSelectElement>): void =>{
     const value = event.target.value;
     if(value) {
       navigate(value);

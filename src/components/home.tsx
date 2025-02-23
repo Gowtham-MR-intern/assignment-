@@ -1,10 +1,10 @@
 import React from 'react';
-import bg from '../assets/bg.png';
 
-function home(){
+const Home:React.FC = () => {
   return (
     <div
-      className="w-full h-screen bg-cover bg-no-repeat" style={{ backgroundImage: `url(${bg})`} }>
+      className="w-full h-screen bg-cover bg-no-repeat" style={{ backgroundImage: `url('src/assets/bg.png')`} }>
+
       <div className="flex items-center justify-center h-full">
         <h1 className="text-6xl font-bold text-white text-center">
           SteinnLabs React Exercise
@@ -14,4 +14,4 @@ function home(){
   );
 };
 
-export default home;
+export default Home;

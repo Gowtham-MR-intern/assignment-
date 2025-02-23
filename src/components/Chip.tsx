@@ -1,6 +1,12 @@
 import React from 'react';
 
-function Chip({ label, onClose, color = 'blue' }) {
+type chipprops = {
+  label:string,
+  onClose:()=>void,
+  color:string
+}
+
+const Chip = ({ label, onClose, color = 'blue' }:chipprops) => {
   return (
     <div 
       className={`flex items-center px-3 py-1 rounded-full text-white bg-${color}-500 text-sm border-2`}

@@ -1,6 +1,13 @@
 import React from 'react';
 
-const Typography = ({ variant, children, className}) => {
+type TypographyVariants = 'h1' | 'h2' | 'h3' | 'h4' | 'body1' | 'body2' | 'caption' | 'subtitle1' | 'subtitle2';
+
+type typoprops ={
+  variant: TypographyVariants,
+  children?:React.ReactNode,
+  className?:string
+}
+const Typography = ({ variant, children, className}:typoprops) => {
   const typographyStyles = {
     h1: "text-4xl font-extrabold",
     h2: "text-3xl font-semibold mb-2",

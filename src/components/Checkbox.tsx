@@ -1,6 +1,11 @@
 import React from 'react';
 
-function Checkbox({ label, defaultChecked }) {
+type checkprops={
+  label:string,
+  defaultChecked:boolean
+}
+
+const Checkbox = ({ label, defaultChecked }:checkprops) => {
   return (
     <label className="flex items-center gap-2 cursor-pointer ml-16">
       <input 
