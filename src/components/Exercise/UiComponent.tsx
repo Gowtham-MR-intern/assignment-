@@ -1,12 +1,12 @@
-import React, {useState, useEffect} from 'react'
-import Button from './Button'
-import Checkbox  from './Checkbox'
-import Dropdownmenu from './Dropdownmenu'
-import TextField from './Textfield'
-import Typography from './Typography'
-import Chip from './Chip'
-import Dialog from './dialog'
-import Loading from './Loading'
+import React, { useState } from 'react'
+import Button from '../common/Button'
+import Checkbox  from '../common/CheckBox'
+import Dropdownmenu from '../common/Dropdown'
+import TextField from '../common/TextField'
+import Typography from '../common/TypoGraphy'
+import Chip from '../common/Chip'
+import Dialog from '../common/Dialog'
+import Loading from '../common/Loading'
 
 
 const UIcomponent:React.FC = () => {

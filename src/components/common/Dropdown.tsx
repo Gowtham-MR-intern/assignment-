@@ -37,7 +37,7 @@ const Dropdown: React.FC = () => {
   }, []);
 
   return (
-    <div className="ml-auto relative" ref={dropdownRef}>
+    <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex rounded cursor-pointer px-4 py-2 text-gray-900 bg-gray-300 hover:bg-gray-50"

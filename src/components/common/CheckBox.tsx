@@ -5,7 +5,7 @@ type checkprops={
   defaultChecked:boolean
 }
 
-const Checkbox = ({ label, defaultChecked }:checkprops) => {
+const CheckBox = ({ label, defaultChecked }:checkprops) => {
   return (
     <label className="flex items-center gap-2 cursor-pointer ml-16">
       <input 
@@ -18,4 +18,4 @@ const Checkbox = ({ label, defaultChecked }:checkprops) => {
   );
 }
 
-export default Checkbox;
+export default CheckBox;

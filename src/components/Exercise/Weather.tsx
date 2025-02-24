@@ -1,5 +1,5 @@
 import React, {useState } from 'react';
-import Loading from './Loading';
+import Loading from '../common/Loading';
 import { FaSearch } from "react-icons/fa";
 import { MdOutlineWaterDrop } from "react-icons/md";
 import { LuWind } from "react-icons/lu";
@@ -15,7 +15,7 @@ interface WeatherData {
   };
 }
 
-function Weather(): React.JSX.Element {
+const Weather:React.FC = () =>{
   const [city, setCity] = useState<WeatherData | null>(null);
   const [search, setSearch] = useState<string>("");
   const [error, setError] = useState<string | null>(null);

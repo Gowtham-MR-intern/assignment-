@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/navbar';
-import FlexPlayground from './components/Flexbox';
-import FetchAPI from './components/Fetchapi'
-import Home from './components/home'
-import UIcomponent from './components/UIcomponent'
-import Login from './components/login';
-import Weather from './components/Weather';
+import Navbar from './components/Navbar';
+import FlexPlayground from './components/Exercise/Flexbox';
+import FetchAPI from './components/Exercise/FetchApi'
+import Home from './components/Home'
+import UIcomponent from './components/Exercise/UiComponent'
+import Login from './components/Exercise/Login';
+import Weather from './components/Exercise/Weather';
 
 const App:React.FC = () => {
   return (
