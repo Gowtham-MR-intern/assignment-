@@ -6,7 +6,7 @@ type modalprops ={
   title:string,
   children?:React.ReactNode
 }
-const Modal = ({ isOpen, onClose, title, children }:modalprops) => {
+const Dialog = ({ isOpen, onClose, title, children }:modalprops) => {
 
   if (!isOpen) return null;
 
@@ -42,4 +42,4 @@ const Modal = ({ isOpen, onClose, title, children }:modalprops) => {
   );
 }
 
-export default Modal;
+export default Dialog;

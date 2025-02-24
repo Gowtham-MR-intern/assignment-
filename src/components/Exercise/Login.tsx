@@ -1,7 +1,7 @@
 import React, {useState}from 'react'
-import TextField from './Textfield'
-import Button from './Button'
-import Typography from './Typography'
+import TextField from '../common/TextField'
+import Button from '../common/Button'
+import Typography from '../common/TypoGraphy'
 
 
 const login:React.FC = () => {
